@@ -17,5 +17,7 @@ print "If I add %d, %.2f, and %d I get %.2f." % (
 
 # Extra
 
-print "I'm %.2f metres tall, the same as %.2f inches." % (my_height, my_height * 39.37)
-print "I'm %d kilograms heavy, the same as %.1f pounds" % (my_weight, my_weight * 2.2)
+print "I'm %.2f metres tall, the same as %.2f inches." % (
+    my_height, my_height * 39.37)
+print "I'm %d kilograms heavy, the same as %.1f pounds" % (
+    my_weight, my_weight * 2.2)
