@@ -8,4 +8,5 @@ def teardown():
     print "TEAR DOWN!"
 
 def test_basic():
-    print "I RAN!"
+    text = "Hello word!"
+    NAME.print_stuff(text)
