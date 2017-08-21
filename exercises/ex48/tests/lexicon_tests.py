@@ -3,21 +3,21 @@ import lexicon
 
 def test_directions():
     assert_equal(lexicon.scan("north"), [('direction', 'north')])
-    result = lexicon.scan("north south east")
+    result = lexicon.scan("north SOUTH east")
     assert_equal(result, [('direction', 'north'),
                           ('direction', 'south'),
                           ('direction', 'east')])
 
 def test_verbs():
     assert_equal(lexicon.scan("go"), [('verb', 'go')])
-    result = lexicon.scan("go kill eat")
+    result = lexicon.scan("go Kill eat")
     assert_equal(result, [('verb', 'go'),
                           ('verb', 'kill'),
                           ('verb', 'eat')])
 
 def test_stops():
     assert_equal(lexicon.scan("the"), [('stop', 'the')])
-    result = lexicon.scan("the in of")
+    result = lexicon.scan("THE in of")
     assert_equal(result, [('stop', 'the'),
                           ('stop', 'in'),
                           ('stop', 'of')])
@@ -35,8 +35,8 @@ def test_numbers():
                           ('number', 91234)])
 
 def test_errors():
-    assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'ASDFADFASDF')])
-    result = lexicon.scan("bear IAS princess")
+    assert_equal(lexicon.scan("ASDFADFASDF"), [('error', 'asdfadfasdf')])
+    result = lexicon.scan("bear IAS Princess")
     assert_equal(result, [('noun', 'bear'),
-                          ('error', 'IAS'),
+                          ('error', 'ias'),
                           ('noun', 'princess')])
