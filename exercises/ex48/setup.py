@@ -11,7 +11,7 @@ config = {
     'author_email': 'raddaouimarin@gmail.com',
     'version': '0.1',
     'install_requires': ['nose'],
-    'packages': ['lexicon'],
+    'packages': ['lexicon', 'ex49'],
     'scripts': [],
     'name': 'ex48'
 }
