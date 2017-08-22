@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['192.168.56.128']
 # Application definition
 
 INSTALLED_APPS = [
-    'ex50.apps.Ex50Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +54,7 @@ ROOT_URLCONF = 'web_exercises.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

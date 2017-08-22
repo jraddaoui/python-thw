@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}Exercise 50{% endblock %}
+
+{% block content %}
+    {% if hello %}
+        <p style="color: green; font- size: 2em;">{{ hello }}</p>
+    {% else %}
+        <p>No hello available</p>
+    {% endif %}
+{% endblock %}
