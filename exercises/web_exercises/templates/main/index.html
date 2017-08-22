@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}Web exercises{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for name, text in exercises %}
+            <li><a href="{% url name %}">{{ text }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
