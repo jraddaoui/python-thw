@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}Exercise 51{% endblock %}
+
+{% block content %}
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    <form action="{% url 'ex51:index' %}" method="post">
+        {% csrf_token %}
+        <label for="hello">Hello</label>
+        <input type="text" name="hello" id="hello" value="{{ hello }}" />
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{ name }}" />
+        <input type="submit" value="Send" />
+    </form>
+
+    <a href="{% url 'index' %}">Back</a>
+
+{% endblock %}
